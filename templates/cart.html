@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cart</title>
+	<link rel="stylesheet" type="text/css" href="static/cukur.css">
+</head>
+<body>
+<div class="navbar">
+  <a style="float:left;" href ={{ url_for ('home') }}>home</a>
+  <a class="active" href={{ url_for ('cart) }}'>cart</a>
+  <a href={{ url_for ('songs') }}>Songs</a>
+  <a href={{ url_for ('shop') }}>Mini Store</a>
+  <a href={{ url_for ('wallwritings') }}>Wall writings</a>
+  <a href={{ url_for ('cast') }}>cast</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Seasons
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href={{ url_for ("season1") }}>season 1</a>
+    <a href={{ url_for ("season2") }}>season 2</a>
+    <a href={{ url_for ("season3") }}>season 3</a>
+  </div>
+  </div> 
+</div>
+	<br>
+	<br>
+	<h1 style="color: darkred;">Cart</h1>
+
+</body>
+</html>

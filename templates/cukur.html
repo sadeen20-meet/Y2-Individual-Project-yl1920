@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CUKUR</title>
+<link rel="stylesheet" type="text/css" href="static/cukur.css">
+	
+
+
+</head>
+<body>
+  <div class="navbar">
+  <a class="active" style="float:left;" href ={{ url_for ('home') }}>home</a>
+  <a href={{ url_for ('songs') }}>Songs</a>
+  <a href={{ url_for ('shop') }}>Mini Store</a>
+  <a href={{ url_for ('wallwritings') }}>Wall writings</a>
+  <a href={{ url_for ('cast') }}>cast</a>
+
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Seasons
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href={{ url_for ("season1") }}>season 1</a>
+    <a href={{ url_for ("season2") }}>season 2</a>
+    <a href={{ url_for ("season3") }}>season 3</a>
+  </div>
+  </div> 
+</div>
+
+  <br>
+
+<h1 style="font-size: 60px; color:darkred;">Cukur (The pit)</h1>
+	<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 8</div>
+    <img src="https://i.pinimg.com/originals/88/9f/fa/889ffaae6e7735fcd812cf75260a0bc5.jpg" style="width:730px; height: 730px; ">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 8</div>
+    <img src="https://static10.tgstat.ru/channels/_0/9a/9a509f4ead6ec508cf03611ee45d7d06.jpg" style="width:730px; height: 730px">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 8</div>
+    <img src= "https://m.media-amazon.com/images/M/MV5BMTQ0YmVkZmQtMzRjYi00OWMzLWFjMzAtMmUxMGQ1ZDJjODAzXkEyXkFqcGdeQXVyOTQ1Mzg0Mzg@._V1_.jpg"style="width:730px; height: 730px">
+    
+  </div>
+
+
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 8</div>
+    <img src="https://m.media-amazon.com/images/M/MV5BNTg2MzdmZTItN2FkZC00NGVkLWEyZGUtOTI1MDU5NDBhZTYzXkEyXkFqcGdeQXVyOTQ1Mzg0Mzg@._V1_.jpg" style="width: 730px; height: 730px;">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="https://img.fanatik.com.tr/img/75/0x0/5cd09d5566a97c58fd82fc83" style="width:730px; height: 730px">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="https://foto.haberler.com/haber/2019/03/26/reyting-rekortmeni-cukur-catisma-sahnesiyle-alay-11876343_75_m.jpg" style="width:730px; height: 730px">
+    
+  </div>
+
+
+    <div class="mySlides fade">
+    <div class="numbertext">7 / 8</div>
+    <img src="https://image.winudf.com/v2/image1/Y29tLmN1a3VyLndhbGxwYXBlci50b3Bfc2NyZWVuXzBfMTU0ODYyOTczNV8wNjM/screen-0.jpg?fakeurl=1&type=.jpg" style="width:730px; height: 730px">
+    
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">8 / 8</div>
+    <img src="https://i.pinimg.com/236x/b4/a2/de/b4a2de641695c9f4045e9c85e052c4dc.jpg" style="width:730px; height: 730px">
+    
+  </div>
+
+<div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a> </div>
+<div>
+  <a class="next" onclick="plusSlides(1)" style="width: -moz-fit-content;">&#10095;</a></div>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:left;">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
+
+
+<div style="position: relative; left: 800px; top: -600px;">
+  <h1 style="color: darkred; font-size: 35px;">what is "cukur"?</h1>
+  <br>
+  <strong><p>çukur is a Turkish series set in one of the most dangerous neighborhoods of Istanbul.</p></strong>
+  <strong><p> This neighborhood is called çukur (the Pit)</p></strong>
+  <strong><p> This dangerous neighborhood is ran by a noble mafia family called Koçovaly. </p></strong>
+  <strong><p> When the family is in the danger of losing the control of The Pit.</p></strong>
+  <strong><p> their youngest son now must come back to his home, where he could never escape from.</p></strong>
+  <strong><p>Every man who lives their has ameaningful sign tattooed on their body</p></strong>
+  <strong><p>the thrills start to rise and take control of you ! every episode is thrilling ,</p></strong>
+  <strong><p>filled with emotions and extremely interesting events !</p></strong>
+  <strong><p>the way this series is moving is so special and unique ,the story is one of a kind and worth your time!</p></strong>
+`</div>
+
+
+<script type="text/javascript">
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+</script>
+</body>
+</html>

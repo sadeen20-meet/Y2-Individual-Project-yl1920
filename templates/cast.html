@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cast</title>
+	<link rel="stylesheet" type="text/css" href="static/cukur.css">
+</head>
+
+<style type="text/css">
+
+
+.duvme{
+	float:right;
+
+}
+
+.red{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 50px;
+	background-color: darkred;
+	color:black;
+	width:800px;
+	animation-name: Red;
+	animation-duration: 5s ;
+	animation-iteration-count: infinite;
+	/*position:relative;*/
+	/*left:50%;*/
+	/*transform: translateX(-50%);*/
+}
+
+.grey{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 30px;
+	background-color: grey;
+	color:black;
+	width:900px;
+	position: relative;
+	left: 900px;
+	transform:translateX(-90%);
+	animation-name: Grey;
+	animation-duration: 5s ;
+	animation-iteration-count: infinite;
+	height: 700px; 
+}
+
+#blackGrey{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: black;
+	color:grey;
+}
+
+
+
+@keyframes Grey{
+	from{background-color:grey;}
+	to{background-color: darkred;}
+}
+
+@keyframes Red{
+	from{background-color:darkred;}
+	to{background-color: grey;}
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: black;
+  position:fixed;
+  margin-right: 0px;
+  margin-top: 0px;
+  right:0px;
+  top: 0px;
+  overflow: hidden;
+
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: darkred;
+}
+
+ .active {
+  background-color: darkred;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+p {
+  font-size: 18px;
+}
+
+</style>
+<body>
+  <div class="navbar">
+  <a style="float:left;" href ={{ url_for ('home') }}>home</a>
+  <a href={{ url_for ('songs') }}>Songs</a>
+  <a href={{ url_for ('shop') }}>Mini Store</a>
+  <a href={{ url_for ('wallwritings') }}>Wall writings</a>
+  <a class="active" href={{ url_for ('cast') }}>cast</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Seasons
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href={{ url_for ("season1") }}>season 1</a>
+    <a href={{ url_for ("season2") }}>season 2</a>
+    <a href={{ url_for ("season3") }}>season 3</a>
+  </div>
+  </div> 
+</div>
+
+<br>
+<br>
+<h1 style="font-size: 50px; color: darkred;">Cukur - Cast</h1>
+<h1>cukur's main characters</h1>
+
+	<div style="display:flex; flex-direction: row;">
+		<div class="red" style="height: 960px;">
+			
+				<h1>Aras Bulut "Yamac"</h1>
+				<p>The youngest son of Idris , he's a very special character .</p>
+				<p>he is so clever nad crazy at the same time !</p>
+				<img src="https://static.wikia.nocookie.net/d48894ff-404d-41da-b629-8dc094075699/scale-to-width/300" style="width: 600px;">
+				<br>
+				<p> also he has his own special song that gives him power </p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/nHZtCCUBv3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>	
+		<img src="https://steamuserimages-a.akamaihd.net/ugc/924800426949139300/56DD57EA88E7F5A683991BE19823D254514AB1CF/" style="height: 1000px;padding-left: 333px;padding-top: 88px; width: 950px">
+	</div>		
+
+
+	<div style="display:flex; flex-direction: row;">
+		<img src="https://steamuserimages-a.akamaihd.net/ugc/924800426949139300/56DD57EA88E7F5A683991BE19823D254514AB1CF/" style="height:900px; width: 800px;">
+
+		<div class="grey" >
+			
+				<h1><strong>Dilan cicek deniz"sena"</strong></h1>
+				<p>a main character in season1 & season2 ,she has a white heart and a loyal love for yamac</p>
+				<img src="https://m.media-amazon.com/images/M/MV5BOTFmMWViYjUtMTFjZi00ZDM4LWJkNTItMDZkYWJiN2RjZTNhXkEyXkFqcGdeQXVyNDg4MjkzNDk@._V1_.jpgg" >
+			
+		</div>
+	</div>
+	<br>
+
+<div style="display:flex; flex-direction: row;">
+	<div class="red">
+		
+			<h1>Erkan "vartolu"</h1>
+			<p>The unknown son of Idris ,he's the person that everyone hates at the begging but then it's one of
+			your favorites crazy ,funny , dangerous and warm hearted at the same time </p>
+			<img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/48424315_2326913670927056_619644878938177536_n.jpg?_nc_cat=107&_nc_oc=AQmyGUlcZIyW-rNxXGGPDs7GBBWdnjrfo18EbkJ8wQJOuCKsTfU3YBR8Ges3YEeKElw&_nc_ht=scontent.fjrs4-1.fna&oh=753ab430cbb7bbf7235af32b48012cee&oe=5E9DBB4B">
+			<p>He hates this song a lot becuase it has his mother's name "Mehriban" who died when he was a kid. </p>
+			<audio controls="controls">
+  
+ 				<source src="" type="audio/mpeg">
+
+			</audio>
+
+	</div>
+	<img src="https://steamuserimages-a.akamaihd.net/ugc/924800426949139300/56DD57EA88E7F5A683991BE19823D254514AB1CF/" style="height:900px; width: 800px;">
+</div>
+
+	<br>
+
+<div style="display:flex; flex-direction: row;">
+	<img src="https://steamuserimages-a.akamaihd.net/ugc/924800426949139300/56DD57EA88E7F5A683991BE19823D254514AB1CF/" style="height:900px; width: 800px;">
+	<div class="grey">
+	
+			<h1>Necib memili "cumali kocavali"</h1>
+			<p>The eldest son of Idris ,hes's so crazy ,insane ,he'll be one of your very favorites as soon as he enters season2 "he's always angry"</p>
+			<img src="https://img.magazinmax.com/2019/08/01/20190801-115804-fspmm.jpg">
+
+	</div>
+	<br>
+	<br>
+</div>
+<div style="display:flex; flex-direction: row;">
+	<div class="red">
+		<h1>ALICO !- Rıza Kocaoğlu</h1>
+		<p>He's special to the level you can't even describe him </p>
+		<img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/22540022_2031535183746212_2579837779105952606_n.png?_nc_cat=104&_nc_oc=AQmHpQNmjYhtoFJMPhM0B7O7HW7arrWk21-yM9S0mrliJLeUthks_DZ2rR36qqdXNoU&_nc_ht=scontent.fjrs4-1.fna&oh=ae074ada9d7873f7c12a8523102002da&oe=5EA14BE9" style="width:700px;">
+		<p>this is his new scene's music</p>
+		<audio controls="controls">
+			<source src="/home/student/Desktop/cukur/templates/Heja ft. Saki - Aliço ( Çukur Dizi Müziği ).mp3" type="audio/mpeg">
+		</audio>
+
+	</div>
+	<img src="https://steamuserimages-a.akamaihd.net/ugc/924800426949139300/56DD57EA88E7F5A683991BE19823D254514AB1CF/" style="height:900px; width: 800px;">
+</div>
+<br>
+<br>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 27</div>
+  <img src="https://www.celebritiesfrom.com/wp-content/uploads/2019/01/ilayda-alisan.jpg" style="width:100%">
+  <div class="text">Akshin koCHavali-İlayda Alişan</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 27</div>
+  <img src="https://scontent.fjrs4-1.fna.fbcdn.net/v/t1.0-9/24852319_136554193675879_1770758890131022664_n.jpg?_nc_cat=106&_nc_oc=AQmlY6v3EvmJDwAaJ7FbcayEwZfrtC9vvgMQOOdJd1wTjBO8eV9CUb_tr6moSieh_J8&_nc_ht=scontent.fjrs4-1.fna&oh=792120f8a3565619472a3b19c0c5955d&oe=5EA35BD7" style="width:100%">
+  <div class="text">Azar kurtolosh-Cihangir Ceyhan</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 27</div>
+  <img src="https://www.celebritiesfrom.com/wp-content/uploads/2018/03/4D33B6BA-75A0-486D-BD09-7F17CBF216E0.jpeg" style="width:100%">
+  <div class="text">Idris-Ercan Kesal</div>
+</div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 27</div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvyaNi8r1T5ckn2meBiM4l1HhAModYUyeke_nvSFmpv4pepa1n" style="width:100%;max-height: 800px;">
+  <div class="text">Jelasun-Kubilay Aka</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 3</div>
+  <img src="https://i.pinimg.com/736x/43/dd/e9/43dde995bd63063242ab9518a7bfce72.jpg" style="width:100%">
+  <div class="text">Karaja Kochavali-Ece Yaşar</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 3</div>
+  <img src="https://im.showtv.com.tr/2017/09/25/1646336_326e2eb3da833bd6b520e62c25f4375f_640x640.jpg" style="width:100%">
+  <div class="text">Soltan Kochavali-Perihan Savaş</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 3</div>
+  <img src="https://i.pinimg.com/564x/a2/b1/4f/a2b14fe95299af2b3f4b5c1624f969f5.jpg" style="width:100%">
+  <div class="text">Kemal-Uğur Yıldıran</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 3</div>
+  <img src="https://cdn.idolnetworth.com/images/2/oner-erkan.jpg" style="width:100%">
+  <div class="text">Selem Kochavali-Öner Erkan</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 3</div>
+  <img src="https://pbs.twimg.com/media/DpjwTKcXgAEZrbV.jpg" style="width:100%">
+  <div class="text">Medat-Mustafa Kırantepe</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 3</div>
+  <img src="https://diziturkiye.com/wp-content/uploads/2019/09/cukur-saadet-kimdir.jpg" style="width:100%">
+  <div class="text">Saadet-Bonjuk Yilmaz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">11/ 3</div>
+  <img src="http://admin.biyografya.com/_docs/photos/4182a3139f7fbf951abbb4492350c80b.jpg" style="width:100%">
+  <div class="text">Emmeh-Kadir Çermik</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">12 / 3</div>
+  <img src="https://i.pinimg.com/736x/b0/69/36/b0693696742f1c59b3bc013c6a58f04c.jpg" style="width:100%">
+  <div class="text">Metin-Cem Uslu</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">13 / 3</div>
+  <img src="http://admin.biyografya.com/_docs/photos/21c67cd4fbc726c79dc6b16ba35162a7.jpg" style="width:100%">
+  <div class="text">Meke-Aytaç Uşun</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">14 / 3</div>
+  <img src="https://static.karar.com/img/682x350/19-12/12/alperen-duymaz.jpg" style="width:100%">
+  <div class="text">Emrah-Alperen Duymaz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">15 / 3</div>
+  <img src="https://www.turkishdrama.com/wp-content/uploads/2018/10/mustafa-ustundag-actor-7.jpg" style="width:100%">
+  <div class="text">Kahraman kochavali(hero)-Mustafa Üstündağ</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">16 / 3</div>
+  <img src="https://img.dizilah.com/708/conversions/327579-thumb.jpg" style="width:100%">
+  <div class="text">muhyettin-Nebil Sayın</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">17 / 3</div>
+  <img src="https://s1.dmcdn.net/v/RRR661TacpRE1w659/x1080" style="width:100%">
+  <div class="text">Temsah jelil(crocodile)-Ahmet Melih Yılmaz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">18 / 3</div>
+  <img src="http://www.dizistil.com/wp-content/uploads/2018/10/%C3%87ukur-%C3%87eto-siyah-tak%C4%B1m%C3%87ukur-%C3%87eto-beyaz-g%C3%B6mlek-ve-%C3%87ukur-%C3%87eto-kravat.jpg" style="width:100%">
+  <div class="text">cheto-Erkan Avci</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">19 / 3</div>
+  <img src="http://dizihaberci.com/wp-content/uploads/2017/10/%C3%87ukur-Dizisi-Deren-Kimdir-Ger%C3%A7ek-Ad%C4%B1-Oynad%C4%B1%C4%9F%C4%B1-Diziler-1.jpg" style="width:100%">
+  <div class="text"><strong>Deren- Beste Kana</strong></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">20 / 3</div>
+  <img src="https://pbs.twimg.com/media/DwVRyrvWkAA96o3.jpg" style="width:100%">
+  <div class="text">Mehsun-Berkay atesh</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">21 / 3</div>
+  <img src="https://s1.dmcdn.net/v/RTrqs1Td3H9UXuhq7/x1080" style="width:100%">
+  <div class="text">Nehir-Hazal Subasi</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">22 / 3</div>
+  <img src="https://dizicenter.net/wp-content/uploads/2019/09/%C3%87ukur-Bayka%C4%B1n-K%C4%B1z%C4%B1-Efsun-Damla-S%C3%B6nmez.jpg" style="max-height: 600px;">
+  <div class="text">Efsun-Damla Sönmez</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span> 
+  <span class="dot" onclick="currentSlide(13)"></span> 
+  <span class="dot" onclick="currentSlide(14)"></span> 
+  <span class="dot" onclick="currentSlide(15)"></span> 
+  <span class="dot" onclick="currentSlide(16)"></span> 
+  <span class="dot" onclick="currentSlide(17)"></span> 
+  <span class="dot" onclick="currentSlide(18)"></span> 
+  <span class="dot" onclick="currentSlide(19)"></span> 
+  <span class="dot" onclick="currentSlide(20)"></span> 
+  <span class="dot" onclick="currentSlide(21)"></span> 
+  <span class="dot" onclick="currentSlide(22)"></span> 
+  <span class="dot" onclick="currentSlide(23)"></span> 
+  <span class="dot" onclick="currentSlide(24)"></span> 
+  <span class="dot" onclick="currentSlide(25)"></span> 
+  <span class="dot" onclick="currentSlide(26)"></span> 
+  <span class="dot" onclick="currentSlide(27)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mini shop</title>
+	<link rel="stylesheet" type="text/css" href="static/cukur.css">
+
+<style type="text/css">
+	.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  
+}
+
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 20;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card1 button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card1 button:hover {
+  opacity: 0.7;
+}
+
+
+.black{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 50px;
+  background-color: black;
+  color:white;
+  width:850px
+}
+
+.white{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  background-color:white
+  color:black;
+  width:850px;
+  position: relative;
+  left:60%;
+</style>
+</head>
+<body>
+  <div class="navbar">
+  <a style="float:left;" href ={{ url_for ('home') }}>home</a>
+  <a href={{ url_for ('songs') }}>Songs</a>
+  <a class="active" href={{ url_for ('shop') }}>Mini Shop</a>
+  <a href={{ url_for ('wallwritings') }}>Wall writings</a>
+  <a href={{ url_for ('cast') }}>cast</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Seasons
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href={{ url_for ("season1") }}>season 1</a>
+    <a href={{ url_for ("season2") }}>season2 2</a>
+    <a href={{ url_for ("season3") }}>season 3</a>
+  </div>
+  </div> 
+</div>
+<h1 style="font-size: 50px; color: darkred;">Cukur-mini shop</h1>
+<br>
+<p style="font-size: 30px">Items you can find when you visit cukur</p>
+<div style="display: inline-block;">
+	{%for product in products%}
+			<div class="card1" style="display: inline-block;">
+			 	<img src="{{product.picture_link}}" 	style="width:100%">
+		 		<h1>{{product.name}}</h1>
+		 		<p class="price">{{product.price}}</p>
+				<p>{{product.description}}</p>
+				<!-- <a href="/cart/{{product.id}}"><button>Add to Cart</button></a> -->
+				<br>
+				<br>
+			</div>
+	{%endfor%}	
+</div>
+
+
+
+<script type="text/javascript">
+	function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
